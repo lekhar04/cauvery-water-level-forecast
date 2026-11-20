@@ -1,0 +1,14 @@
+# Runtime dependencies for the Cauvery river-level forecast API.
+# Versions match the environment this project was run in.
+# statsmodels is required to unpickle the SARIMAX bundle; use the same
+# (or a close) version that was used for training, otherwise joblib.load may fail.
+
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.7
+numpy>=2.0,<2.3
+pandas>=2.2,<2.4
+scipy>=1.13
+scikit-learn==1.7.2   # the fitted scaler inside the bundle is a scikit-learn object
+statsmodels>=0.14.4   # SARIMAX model
+joblib>=1.4

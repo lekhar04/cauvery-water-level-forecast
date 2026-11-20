@@ -1,0 +1,40 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Trained model files: too large for GitHub (100 MB per-file limit).
+# Distribute them via GitHub Releases / Hugging Face / cloud storage instead
+# (see README, "Getting the model files").
+models/**/*.pkl
+models/**/*.joblib
+
+# Keep the folder structure in the repo
+!models/.gitkeep
+!models/sarimax/.gitkeep
+
+# Local data / secrets
+.env
+*.csv
+*.parquet
+
+# Training outputs
+results/
+
+# Dataset (~880 MB, too large for GitHub); see README for how to obtain it
+data/
