@@ -39,12 +39,11 @@ pip install -r requirements.txt
 
 ### 2. Add the dataset
 
-Training needs the prepared hourly dataset, expected at `data/cauvery_model_dataset.csv`
-(`.parquet` also works). It has one row per station and hour, with the columns `station_id`,
+Training needs the prepared hourly dataset, expected at `data/cauvery_model_dataset.csv`. It has one row per station and hour, with the columns `station_id`,
 `timestamp`, `split`, `target_level_1h` and the feature columns (`lag_*`, `delta_*`,
 `rain_*`, `doy_*`, `hour_*`). It is large (~880 MB), so it is not stored in git.
 
-Get it from **<add your dataset link here>** and place it in `data/`, or pass
+Get it from **https://github.com/lekhar04/cauvery-water-level-forecast/releases/tag/v1.0** and place it in `data/`, or pass
 `--data <path>` to the training script.
 
 ### 3. Train a model
